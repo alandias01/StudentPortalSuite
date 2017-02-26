@@ -1,0 +1,117 @@
+﻿    
+    <nav class="navbar navbar-inverse navbar-static-top ">
+        <!-- navbar-static-top  or navbar-fixed-top-->
+        <div class="container">
+            <div class="navbar-header">   
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>             
+                <a class="navbar-brand" href="/index"><i class="glyphicon glyphicon-home"></i> Student Portal</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#" > Services</a></li>
+
+                    <li class="dropdown">
+                        <a data-submenu href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/gre/gre" >GRE</a></li>
+                                                        
+                            <li class="dropdown-header">CORE</li>
+
+                            
+                            <li class="dropdown-submenu">
+                                <a href="#">Math</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="pages/algebra1/algebra1">Algebra I</a></li>
+                                    <li><a href="#">AlgebraII</a></li>
+                                    <li><a href="#">Gemoetry</a></li>
+                                    <li><a href="#">Trigonometry</a></li>
+                                    <li><a href="#">Pre-Calculus</a></li>
+                                </ul>
+                            </li>
+                                
+
+                            <li><a href="#">Physics</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Technology</li>
+                            
+                            
+                            <li class="dropdown-submenu">
+                                <a href="#">Computer Science</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">CS I</a></li>
+                                    <li><a href="#">Data Structures & Algorithms</a></li>
+                                    <li><a href="#">Design Patterns</a></li>
+                                    <li><a href="#">Software Engineering</a></li>
+
+                                </ul>
+                            </li>
+                                
+                            <li class="dropdown-submenu">
+                                <a href="#">Data Science</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Big Data Tools</a></li>
+                                    <li><a href="#">Python, R, SQL</a></li>
+                                    <li><a href="#">Exploratory Data Analysis</a></li>
+                                    <li><a href="#">Machine Learning Algorithms</a></li>
+                                    <li><a href="#">Predictive analysis</a></li>
+                                    
+
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Infrastructure</a></li>
+                        </ul>
+                    </li>
+                                        
+
+                </ul>
+                
+
+                <ul class="nav navbar-nav navbar-right" ng-show="$ctrl.ifgre">
+
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+                    <li class="dropdown">
+                        <a data-submenu href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Word List<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a href="">All Words</a></li>
+                            <li><a href="#" ng-click="$ctrl.runFrankenstein()">Frankenstein</a></li>
+                            <li><a href="">Pride and Prejudice</a></li>
+                            <li><a href="">Lord of the flies</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+
+                        <form class="navbar-form navbar-left" role="search">
+
+
+                            <div class="btn-group">
+                                <button class="btn btn-default">3</button>
+                                <button class="btn btn-default">6</button>
+                                <button class="btn btn-default">12</button>
+                            </div>
+                        </form>
+
+                    </li>
+
+                </ul>
+
+                <!--Removing temporarily to load Angular Way Note that me option is in here too-->
+                <!--<ul id="appspecific" class="nav navbar-nav navbar-right">
+                    
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    
+                    <li><a href="#about">me <i class="glyphicon glyphicon-user"></i></a></li>
+                </ul>-->
+                
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+

@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+body{margin: 0px; padding: 0px;}
+.menu-bar{background-image: url("img/tbar.jpg"); width:100%;height: 25px; color:white; font: 16px arial;  }
+	.menu-bar ul{ list-style-type: none; margin:0px; padding:0px; }
+	
+	.menu-bar ul.menu-bar-1 li{float: left;   }
+	.menu-bar ul.menu-bar-1 li a{display: block; width: 80px; height:25px; color:white; text-decoration: none; text-align:center; }
+	.menu-bar ul.menu-bar-1 li a:hover{background-color: black; }
+	
+	
+	.menu-bar ul.menu-bar-2 li{float: left; }
+	.menu-bar ul.menu-bar-2 li a{text-decoration: none; text-align:center;}
+	.menu-bar ul.menu-bar-2 li a:hover{}
+	.menu-bar ul.menu-bar-2 li select{height:23px; }
+	.menu-bar ul.menu-bar-2 li input{height:24px; }
+	
+	
+	.menu-bar ul.menu-bar-3 li{float: left;   }
+	.menu-bar ul.menu-bar-3 li a{display: block; width: 90px; height:25px; color:white; text-decoration: none; text-align:center; }
+	.menu-bar ul.menu-bar-3 li a:hover{background-color: black; }
+	
+	.menu-bar ul.menu-bar-4 li{float: right;   }
+	.menu-bar ul.menu-bar-4 li a{display: block; width: 80px; height:25px; color:white; text-decoration: none; text-align:center; }
+	.menu-bar ul.menu-bar-4 li a:hover{background-color: black;}
+	
+	#box-frame td{min-width:300px; max-width:300px; height: 150px;   }
+	
+	.box-definition{min-width:inherit; max-width:inherit; position: absolute; z-index: 2; 
+					color: black; font-weight: bolder; }
+					
+	.box-cover{width: 300px; height: 150px; background-color: black; color: white; font: 18px verdana ; 
+				position:  relative; z-index: 3; }

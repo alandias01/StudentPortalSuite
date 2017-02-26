@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+	    
+    <!--
+    <script src="lib/angular.min.js"></script>    
+    <script src="lib/jquery-2.2.1.min.js"></script>
+    -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>        <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>  <!--AngularJS ui-router -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>           <!--jQuery-->           
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>      <!--jQuery UI-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>         <!--Bootstrap-->
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">    <!--jQuery UI-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">                    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">              <!-- BootstrapOptional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">              <!--Font Awesome-->
+    
+    <style>
+        #div-table{width:50%;}
+    </style>
+
+</head>
+<body>
+    
+
+    
+    <br />
+    <nav class="navbar navbar-inverse "> <!-- navbar-static-top  or navbar-fixed-top-->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+    <p>
+        <button type="button" class="btn btn-lg btn-default">Default &raquo;</button>
+        <button type="button" class="btn btn-lg btn-primary">Primary &raquo;</button>
+        <button type="button" class="btn btn-lg btn-success">Success</button>
+        <button type="button" class="btn btn-lg btn-info">Info</button>
+        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+        <button type="button" class="btn btn-lg btn-link">Link</button>
+    </p>
+
+    <div class="list-group" style="width:200px;">
+        <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+        <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+        <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+        <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+    </div>
+
+    <div class="input-group margin-bottom-sm" style="width:200px;">
+        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+        <input class="form-control" type="text" placeholder="Email address">
+    </div>
+    <div class="input-group" style="width:200px;">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+        <input class="form-control" type="password" placeholder="Password">
+    </div>
+
+
+    <div ng-app="app" ng-controller="appctrl">
+            
+        {{myname}}
+        <br /><br />
+        
+        <button class="btn btn-primary" ng-click="changeusername()">Set Username</button> 
+        <input type="text"  ng-model="username"/>  Username: {{username}}
+		
+
+		<br><br>
+        <div id="div-table">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>DateOfData</th>
+                        <th>TradeRef</th>
+                    </tr>
+                </thead>
+                <tr ng-repeat="x in data1">
+                    <td>{{x.DateOfData}}</td>
+                    <td>{{x.TradeRef}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+	<script>
+	angular.module("app", []).controller("appctrl", function ($scope,$http) {
+    $scope.myname = "alan";
+	
+    $scope.changeusername=function(){ $scope.username="CHANGED!"; }
+    
+    $scope.data1 =
+        [
+            {
+              "DateOfData": "2016-01-01"
+            , "TradeRef": "1111"
+            , "Cusip": "123456789"
+            },
+            {
+              "DateOfData": "2016-01-01"
+            , "TradeRef": "1111"
+            , "Cusip": "123456789"
+            },
+            {
+              "DateOfData": "2016-01-01"
+            , "TradeRef": "1111"
+            , "Cusip": "123456789"
+            }
+        ];
+        
+	//$http.get("http://morph/test/api/u").then(function (response) {$scope.data2 = response.data;});
+		
+	});
+	
+	</script>
+		
+		
+</body>
+</html>

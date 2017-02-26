@@ -1,0 +1,12 @@
+﻿///<autosync enabled="true" />
+/// <reference path="js/app.config.js" />
+/// <reference path="js/app.module.js" />
+/// <reference path="js/navibar.module.js" />
+/// <reference path="lib/angular.min.js" />
+/// <reference path="lib/angular-route.min.js" />
+/// <reference path="lib/bootstrap.min.js" />
+/// <reference path="lib/bootstrap-submenu.min.js" />
+/// <reference path="lib/jquery-2.2.1.min.js" />
+/// <reference path="lib/tutorial/index_bl.js" />
+/// <reference path="lib/tutorial/tutorial.js" />
+/// <reference path="pages/gre/gre.module.js" />

@@ -1,0 +1,52 @@
+﻿<style>
+    
+    .box-frame { min-height: 100px; min-width:200px; margin:15px 0 15px 0px; cursor: pointer; }
+    .box-definition{z-index: 2; background-color:white; position:absolute;}
+    .box-cover{z-index: 3; min-height: 100px; background-color:darkgray; position:relative; }
+
+</style>
+
+
+<div ng-repeat="x in $ctrl.greDataCurrent" ng-if="$index % 3 == 0" class="row">
+    <div class="col-sm-4 box-frame"  >
+        
+            <div class="box-definition" > {{$ctrl.greDataCurrent[$index].definition}}</div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index].word}} </div>
+        
+    </div>
+    
+    <div class="col-sm-4 box-frame" ng-if="$ctrl.greDataCurrent.length > ($index + 1)">
+        
+            <div class="box-definition" > {{$ctrl.greDataCurrent[$index+1].definition}}</div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+1].word}} </div>
+        
+    </div>
+
+    <div class="col-sm-4 box-frame" ng-if="$ctrl.greDataCurrent.length > ($index + 2)">
+        
+            <div class="box-definition" > {{$ctrl.greDataCurrent[$index+2].definition}}</div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+2].word}} </div>
+        
+    </div>
+</div>
+
+
+
+<ul class="pagination">
+    <li>
+        <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    <li><a href="#" ng-click="$ctrl.loadDataForPage($ctrl.currentPage-1)">Prev</a></li>
+    <li><a href="#" ng-click="$ctrl.loadDataForPage($ctrl.currentPage+1)">Next</a></li>
+    <li>
+        <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+    <li class="active"><a>Page {{$ctrl.currentPage}} of {{$ctrl.totalPages}}</a> </li>
+    
+</ul>
+Status:{{$ctrl.status}}
+

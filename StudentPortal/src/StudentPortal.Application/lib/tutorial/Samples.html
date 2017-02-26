@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Samples</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+   		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+   		<link href="http://cdn.wijmo.com/themes/metro/jquery-wijmo.css" rel="stylesheet" type="text/css" title="rocket-jqueryui" />
+   		<script src="http://cdn.jsdelivr.net/jquery.corner/2.13/jquery.corner.js" type="text/javascript"></script>
+   		
+	</head>
+<body>
+
+<!-- ------------------------------------------- Javascript JQUERY ------------------------------------------- -->
+js-var1
+<div id=js-var1></div>
+
+js-var2
+<div id=js-var2></div>
+
+js-var3
+<div id=js-var3></div>
+
+js-var4
+<div id=js-var4></div>
+
+js-var5
+<div id=js-var5></div>
+
+js-var6
+<div id=js-var6></div>
+
+js-var7
+<div id=js-var7></div>
+
+
+js-var8
+<div id=js-var8></div>
+
+js-var9
+<div id=js-var9></div>
+
+<script type="text/javascript">
+
+	//Variables
+	
+	var str1="alan"; var str2="Tim"; var str3=str1+" "+str2;
+	$("#js-var1").html(str3);
+	
+	//str3.length;	
+		
+	var res = str3.substr(1,2); //Returns la
+	$("#js-var2").html(res);
+		
+	var rpl = str3.replace("alan","Mr.");
+	$("#js-var3").html(rpl);
+	
+	var spl=str3.split(" ");
+	$("#js-var4").html(spl[1]);
+	
+	var indxof=str3.indexOf(" ");
+	$("#js-var5").html(indxof);
+	
+	
+	if(str3.match(/alan T/g))
+	{
+		$("#js-var6").html("True");		
+	}
+	else
+	{
+		$("#js-var6").html("False");		
+	}
+	
+	
+	var age1=5;	var age2=5;
+	if(age1==age2) { $("#js-var7").html("Equals"); }	else{$("#js-var7").html("Not Equals");}
+	
+	
+	//Arrays
+	
+	var va=[];
+	va.push("alan");
+	va.push("ben");
+	va.push("mike");
+	var indxof1 = va.indexOf("ben");	//returns 1
+	var data1="mike, jon, kim";
+	var v=data1.split(",");
+			
+	$.each(va,function(i,j)
+		  {
+			$("#js-var8").append( "<p id="+i+">"+j+"</p>" );
+		  }
+	  );
+	
+	
+	//AJAX	dataoutput.php <?php echo $_GET["w"]."<!>"; ?>
+	$.get('dataoutput.php',{w:"input"}
+	  ,function(data)
+		  {
+			  $("#divautoc").html(data);                                            
+		  }
+	  );
+	//Lets say insead you echo a ton of data, separate with <!>.  Then in js, do var v=data.split("<!>")
+	
+	
+	function lookup(inputword){
+
+	if(inputword.length==0)
+		{ $("#t1").hide(); }
+	
+	else
+		{
+		$("#t1").show ();
+		$.post( "lib/ajax/ajaxlist.php", {q: inputword}, 
+		function(data){ if(data.length >=0) { $("#t1").html(data); } } );
+		}
+	
+}
+
+
+
+</script>
+  
+<!-- ------------------------------------------- Javascript JQUERY ------------------------------------------- -->
+
+
+<!-- ------------------------------------------- JQUERY  UI------------------------------------------- -->
+
+<div id="box-a" style="width: 100px; height: 100px; background-color: red;">Hide</div><br>
+<div id="box-b" style="width: 100px; height: 100px; background-color: red;">Corner, Click</div><br>
+<div id="box-c" style="width: 100px; height: 100px; background-color: red;">Hover</div><br>
+
+<div id="box-d" style="width: 100px; height: 100px; background-color: red;">
+	<div id="box-d-header" style="vertical-align:top; background-color: yellow;">Drag-me</div>
+</div><br>
+
+
+
+<script type="text/javascript">
+	$("#box-a").hide();
+	$("#box-b").corner("tl 10px");	
+	$("#box-b").click( function () { $("#box-b").slideToggle();	});
+	
+	$("#box-c").hover( 
+		    function () {
+		    $(this).css({'background':'#AEAEFF', 'cursor': 'hand'});
+		     }, 
+		     function() { 
+		     $(this).css({'background':'#8B8CFE'});
+		     }
+		);
+	
+	$("#box-d").draggable({handle: '#box-d-header', grid:[20,20]});
+
+	
+	//For the sliding menu
+	$("#menu_top ul").css({display: "none"}); // Opera Fix
+	$("#menu_top li").hover(function(){
+			$(this).find('ul:first:hidden').css({visibility: "visible",display: "none"}).slideDown(200);
+			},function(){
+			$(this).find('ul:first').hide(100);
+			});
+	
+</script>
+
+<!-- ------------------------------------------- JQUERY UI------------------------------------------- -->
+
+
+
+
+<!-- ------------------------------------------- TABLES ------------------------------------------- -->
+<style>
+
+#ui-table th {text-align: left; background-color: #B8DBFF; color: black; font-family: segoe ui  ;} 
+#ui-table td {font-family: segoe ui ; font-size: 13px;}
+#ui-table, #ui-table th,#ui-table td {    border: 0px solid black;    border-collapse: collapse; }
+
+#ui-table th, #ui-table td {    padding: 5px; }
+
+
+</style>
+
+<table id="ui-table" style="width:25%"  >
+  <tr>
+    <th>Trade</th>    <th>Symbol</th> <th>Price</th>   
+  </tr>
+  <tr>
+  	<td>12300</td>    <td>AAPL</td>    <td>94</td>
+  </tr>
+  <tr>
+  	<td>12301</td>    <td>CVS</td>    <td>106</td>
+  </tr>
+  <tr>  	<td>12302</td>    <td>GME</td>    <td>46</td>  </tr>
+  <tr>  	<td>12303</td>    <td>SWI</td>    <td>35</td>  </tr>
+</table>
+
+<br/><br/><br/>
+
+<script type="text/javascript">
+$("#ui-table tr:even").css({'background': '#FFFFD4'});
+
+</script>
+<!-- ------------------------------------------- TABLES END ------------------------------------------- -->
+
+
+<!-- ------------------------------------------- FORMS ------------------------------------------- -->
+<form id="form-update" action="" method="post">
+	<input type="text" name="birthday" /> 
+</form>
+
+
+<script type="text/javascript">
+
+	$("#form-update input[name='birthday']").datepicker({ dateFormat: 'yy-mm-dd' });
+
+</script>
+<!-- ------------------------------------------- FORMS ------------------------------------------- -->
+
+
+<!--  -->
+<script type="text/javascript">
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
