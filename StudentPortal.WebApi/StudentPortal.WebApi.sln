@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortal.WebApi", "StudentPortal.WebApi\StudentPortal.WebApi.csproj", "{063C5D16-C90B-45B8-AC41-C2D70EF17467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortal.Data.GRE", "..\StudentPortal.Data.GRE\StudentPortal.Data.GRE.csproj", "{19C6F394-612D-49FA-B240-64857EB3BDCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{063C5D16-C90B-45B8-AC41-C2D70EF17467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063C5D16-C90B-45B8-AC41-C2D70EF17467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063C5D16-C90B-45B8-AC41-C2D70EF17467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063C5D16-C90B-45B8-AC41-C2D70EF17467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C6F394-612D-49FA-B240-64857EB3BDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C6F394-612D-49FA-B240-64857EB3BDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C6F394-612D-49FA-B240-64857EB3BDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C6F394-612D-49FA-B240-64857EB3BDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
