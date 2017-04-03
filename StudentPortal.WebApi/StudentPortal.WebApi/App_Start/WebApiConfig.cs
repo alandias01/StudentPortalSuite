@@ -11,7 +11,7 @@ namespace StudentPortal.WebApi
         {
             // Web API configuration and services
 
-            //config.EnableCors();
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 

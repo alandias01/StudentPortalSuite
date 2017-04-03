@@ -10,19 +10,20 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using StudentPortal.Data.GRE;
+using System.Web.Http.Cors;
 
 namespace StudentPortal.WebApi.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
-    //[EnableCors(origins: "http://ui01.azurewebsites.net", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://ui01.azurewebsites.net", headers: "*", methods: "*")]
     public class wordsController : ApiController
     {
         private greEntities db = new greEntities();
 
         // GET: api/words
-        public IQueryable<word> Getwords()
-        {
-            return db.words;
+        public IEnumerable<word> Getwords()
+        {                                    
+            return db.words.ToList();
         }
 
         // GET: api/words/5
