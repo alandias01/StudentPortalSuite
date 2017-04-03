@@ -13,6 +13,8 @@ using StudentPortal.Data.GRE;
 
 namespace StudentPortal.WebApi.Controllers
 {
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
+    //[EnableCors(origins: "http://ui01.azurewebsites.net", headers: "*", methods: "*")]
     public class listsController : ApiController
     {
         private greEntities db = new greEntities();
