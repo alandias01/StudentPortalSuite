@@ -18,6 +18,9 @@ namespace StudentPortal.WebApi.Controllers
     [EnableCors(origins: "http://ui01.azurewebsites.net", headers: "*", methods: "*")]
     public class wordsController : ApiController
     {
+        public wordsController()
+        {
+        }
         private greEntities db = new greEntities();
 
         // GET: api/words
