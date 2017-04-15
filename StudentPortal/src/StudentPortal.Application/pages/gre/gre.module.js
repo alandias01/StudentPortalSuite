@@ -36,7 +36,7 @@ function greWordsController($http, greWordsFactory, naviBarFactory) {
 
     greWordsFactory.registerObserverCallback(updateGreData);    
     
-    greWordsFactory.loadGreData("grewords.json");
+    greWordsFactory.loadGreData("words");
     
 
     self.loadDataForPage = function (pg) {
@@ -86,9 +86,9 @@ angular.module('greWords').factory('greWordsFactory', function ($http) {
     obj.greDataCurrent = [];
 
     obj.loadGreData = function (apicall) {        
-        $http.get("pages/gre/" + apicall).
-        //$http.get("http://alandias.azurewebsites.net/api/alan2").
-        then(function (response) {
+        //$http.get("pages/gre/" + apicall).        
+        $http.get("http://ui01api.azurewebsites.net/api/" + apicall).
+            then(function (response) {
             //alert(response.data);
             obj.greData = [];
             obj.greData = response.data;            

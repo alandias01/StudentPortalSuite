@@ -33,7 +33,8 @@ function naviBarController($http, $location, naviBarFactory, greWordsFactory) {
         //alert("Hi");
         greWordsFactory.greData = [];
         greWordsFactory.greDataCurrent = [];
-        greWordsFactory.loadGreData("grewords2.json");
+        //greWordsFactory.loadGreData("grewords2.json");
+        greWordsFactory.loadGreData("vlistwords");
     };
     
     

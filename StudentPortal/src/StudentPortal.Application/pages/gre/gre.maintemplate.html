@@ -11,21 +11,21 @@
     <div class="col-sm-4 box-frame"  >
         
             <div class="box-definition" > {{$ctrl.greDataCurrent[$index].definition}}</div>
-            <div class="box-cover" >{{$ctrl.greDataCurrent[$index].word}} </div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index].word1}} </div>
         
     </div>
     
     <div class="col-sm-4 box-frame" ng-if="$ctrl.greDataCurrent.length > ($index + 1)">
         
             <div class="box-definition" > {{$ctrl.greDataCurrent[$index+1].definition}}</div>
-            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+1].word}} </div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+1].word1}} </div>
         
     </div>
 
     <div class="col-sm-4 box-frame" ng-if="$ctrl.greDataCurrent.length > ($index + 2)">
         
             <div class="box-definition" > {{$ctrl.greDataCurrent[$index+2].definition}}</div>
-            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+2].word}} </div>
+            <div class="box-cover" >{{$ctrl.greDataCurrent[$index+2].word1}} </div>
         
     </div>
 </div>
