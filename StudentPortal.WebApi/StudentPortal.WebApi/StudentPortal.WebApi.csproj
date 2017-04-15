@@ -116,6 +116,7 @@
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\alandias - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\alandias - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\UI01API - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,7 +145,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>6586</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
