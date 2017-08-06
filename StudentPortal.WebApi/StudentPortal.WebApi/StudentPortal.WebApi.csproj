@@ -119,10 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\alandias - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\alandias - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\UI01API - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\UI01API - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\UI01Api - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
