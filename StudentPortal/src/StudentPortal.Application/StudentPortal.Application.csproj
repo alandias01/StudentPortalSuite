@@ -70,7 +70,6 @@
     <Content Include="pages\gre\grewords.json" />
     <Content Include="pages\gre\grewords2.json" />
     <Content Include="pages\gre\grewords3.json" />
-    <None Include="Properties\PublishProfiles\UI01 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\UI01 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -114,6 +113,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
